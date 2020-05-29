@@ -1,0 +1,5 @@
+# robots.txt for cdn domain
+User-agent: *
+Disallow: /
+Sitemap: https://www.hooyim.com/sitemap.xml
+Sitemap: https://www.hooyim.com/sitemap

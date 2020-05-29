@@ -1,0 +1,6 @@
+# robots.txt
+User-agent: *
+Disallow: /bin/
+Disallow: /proxy
+Sitemap: https://www.hooyim.com/sitemap.xml
+Sitemap: https://www.hooyim.com/sitemap
