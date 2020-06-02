@@ -6,7 +6,6 @@ WORKDIR /app
 # RUN npm config set registry https://registry.npm.taobao.org
 COPY package*.json ./
 RUN npm install --production --registry=https://registry.npm.taobao.org
-RUN npm run build
 COPY . .
 
 # expose port 80
