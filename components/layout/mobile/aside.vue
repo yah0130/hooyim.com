@@ -40,10 +40,10 @@
           <i class="iconfont icon-vlog"></i>
           <span v-text="$i18n.nav.vlog"></span>
         </nuxt-link>
-        <nuxt-link to="/about" class="item">
+        <!-- <nuxt-link to="/about" class="item">
           <i class="iconfont icon-user"></i>
           <span v-text="$i18n.nav.about"></span>
-        </nuxt-link>
+        </nuxt-link> -->
       </nav>
     </div>
   </aside>
