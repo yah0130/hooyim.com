@@ -72,7 +72,7 @@ export default {
     { src: '~/plugins/favico', mode: 'client' },
     // { src: '~/plugins/adsense', mode: 'client' },
     { src: '~/plugins/swiper', mode: 'client' },
-    // { src: '~/plugins/analytics', mode: 'client' },
+    { src: '~/plugins/analytics', mode: 'client' },
     { src: '~/plugins/emoji-233333', mode: 'client' },
     { src: '~/plugins/copy-right', mode: 'client' },
     { src: '~/plugins/popup', mode: 'client' },
