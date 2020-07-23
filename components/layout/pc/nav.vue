@@ -39,14 +39,14 @@
         <i class="iconfont icon-instagram"></i>
         <span class="text" v-text="$i18n.nav.instagram"></span>
       </a>
-      <nuxt-link to="/about" class="item">
+      <!-- <nuxt-link to="/about" class="item">
         <i class="iconfont icon-user"></i>
         <span class="text" v-text="$i18n.nav.about"></span>
-      </nuxt-link>
-      <nuxt-link to="/service" class="item">
+      </nuxt-link> -->
+      <!-- <nuxt-link to="/service" class="item">
         <i class="iconfont icon-tool"></i>
         <span class="text" v-text="$i18n.nav.service"></span>
-      </nuxt-link>
+      </nuxt-link> -->
       <nuxt-link to="/guestbook" class="item guestbook">
         <i class="iconfont icon-comment"></i>
         <span class="text" v-text="$i18n.nav.guestbook"></span>

@@ -2,7 +2,7 @@
   <div id="toolbox">
     <div class="container">
       <div class="tools">
-        <a
+        <!-- <a
           href="/rss.xml"
           target="_blank"
           class="rss"
@@ -10,7 +10,7 @@
           @mousedown="handleRSS"
         >
           <i class="iconfont icon-rss" />
-        </a>
+        </a> -->
         <button
           class="barrage"
           :title="$i18n.text.barrage.name"
