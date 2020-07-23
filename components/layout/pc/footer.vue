@@ -48,8 +48,6 @@
         <span
           >&nbsp;和&nbsp;日月星辰&nbsp;强力驱动&nbsp;&nbsp;|&nbsp;&nbsp;</span
         >
-        <nuxt-link to="/about">吾之臂躯</nuxt-link>
-        <span>&nbsp;行针步线</span>
       </span>
     </div>
     <div style="width:300px;margin:0 auto; padding:20px 0;">

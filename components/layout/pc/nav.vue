@@ -101,10 +101,10 @@
         <i class="iconfont icon-fox-colour"></i>
         <span class="text">FF.io</span>
       </a>
-      <nuxt-link to="/app" class="item app">
+      <!-- <nuxt-link to="/app" class="item app">
         <i class="iconfont icon-app"></i>
         <span class="text" v-text="$i18n.nav.app"></span>
-      </nuxt-link>
+      </nuxt-link> -->
     </nav>
   </div>
 </template>
