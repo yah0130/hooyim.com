@@ -37,7 +37,7 @@
       if (isBrowser && isProdMode) {
         console.clear()
         console.log(
-          `%c${window.$nuxt.$i18n.text.slogan} %csurmon@foxmail.com`,
+          `%c${window.$nuxt.$i18n.text.slogan} %cyanhao0130@hotmail.com`,
           'color:#666;font-size:3em;',
           'color:#666;font-size:13px;'
         )

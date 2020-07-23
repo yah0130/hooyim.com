@@ -16,10 +16,10 @@ let store = {};
   store.modules = store.modules || {}
 
   resolveStoreModules(require('../store/announcement.js'), 'announcement.js')
+  resolveStoreModules(require('../store/article.js'), 'article.js')
   resolveStoreModules(require('../store/category.js'), 'category.js')
   resolveStoreModules(require('../store/comment.js'), 'comment.js')
   resolveStoreModules(require('../store/global.js'), 'global.js')
-  resolveStoreModules(require('../store/article.js'), 'article.js')
   resolveStoreModules(require('../store/music.js'), 'music.js')
   resolveStoreModules(require('../store/sitemap.js'), 'sitemap.js')
   resolveStoreModules(require('../store/tag.js'), 'tag.js')

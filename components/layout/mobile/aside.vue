@@ -2,10 +2,10 @@
   <aside class="aside" :class="{ open: open }">
     <div class="aside-user">
       <div class="avatar">
-        <img :src="gravatar" alt="Surmon" draggable="false">
+        <img :src="gravatar" alt="Hooyim" draggable="false">
       </div>
       <div class="profile">
-        <h3 class="name">Surmon</h3>
+        <h3 class="name">Hooyim</h3>
         <p class="slogan" v-text="$i18n.text.slogan"></p>
       </div>
     </div>
@@ -43,18 +43,6 @@
         <nuxt-link to="/about" class="item">
           <i class="iconfont icon-user"></i>
           <span v-text="$i18n.nav.about"></span>
-        </nuxt-link>
-        <nuxt-link to="/service" class="item">
-          <i class="iconfont icon-tool"></i>
-          <span v-text="$i18n.nav.service"></span>
-        </nuxt-link>
-        <nuxt-link to="/guestbook" class="item guestbook">
-          <i class="iconfont icon-comment"></i>
-          <span v-text="$i18n.nav.guestbook"></span>
-        </nuxt-link>
-        <nuxt-link to="/app" class="item app">
-          <i class="iconfont icon-app"></i>
-          <span v-text="$i18n.nav.app"></span>
         </nuxt-link>
       </nav>
     </div>

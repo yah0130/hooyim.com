@@ -5,7 +5,7 @@
         <background />
         <wallflower />
         <barrage />
-        <wallpaper-switch v-if="!isFullViewWidth" />
+        <!-- <wallpaper-switch v-if="!isFullViewWidth" /> -->
         <theme-switch v-if="!isFullViewWidth" />
         <language v-if="!isFullViewWidth" />
         <tool-box v-if="isNotFullColPage" />
