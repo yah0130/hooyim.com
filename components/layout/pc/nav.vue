@@ -47,10 +47,10 @@
         <i class="iconfont icon-tool"></i>
         <span class="text" v-text="$i18n.nav.service"></span>
       </nuxt-link> -->
-      <nuxt-link to="/guestbook" class="item guestbook">
+      <!-- <nuxt-link to="/guestbook" class="item guestbook">
         <i class="iconfont icon-comment"></i>
         <span class="text" v-text="$i18n.nav.guestbook"></span>
-      </nuxt-link>
+      </nuxt-link> -->
       <!-- <a
         v-if="false"
         :href="adConfig.nav.holiday"
@@ -83,7 +83,7 @@
           <i class="iconfont icon-hot"></i>
         </span>
       </a> -->
-      <a
+      <!-- <a
         target="_blank"
         class="item ad throwerror"
         rel="external nofollow noopener"
@@ -100,7 +100,7 @@
       >
         <i class="iconfont icon-fox-colour"></i>
         <span class="text">FF.io</span>
-      </a>
+      </a> -->
       <!-- <nuxt-link to="/app" class="item app">
         <i class="iconfont icon-app"></i>
         <span class="text" v-text="$i18n.nav.app"></span>
