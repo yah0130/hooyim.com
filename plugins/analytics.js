@@ -12,7 +12,7 @@ import { getFileCDNUrl } from '~/transformers/url'
 if (isBrowser) {
   window.onNuxtReady(app => {
     Vue.use(VueAnalytics, {
-      id: 'UA-84887611-3',
+      id: 'UA-152646744-1',
       router: window.$nuxt.$router,
       customResourceURL: getFileCDNUrl('/scripts/analytics.js'),
       autoTracking: {
