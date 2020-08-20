@@ -1,7 +1,7 @@
 /**
  * @file 客户端初始化任务管理器 / ES module
  * @module plugins/loaded-task
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { isBrowser } from '~/environment'

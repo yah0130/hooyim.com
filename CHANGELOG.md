@@ -240,7 +240,7 @@ All notable changes to this project will be documented in this file.
 - 代码检查的优化
 - 一些代码细节的优化
 - 播放器的有优化
-- 分享的剪切板需重构去掉库 https://surmon.me/article/80
+- 分享的剪切板需重构去掉库
 - 右侧广告的添加
 - PWA 的适配https://pwa.nuxtjs.org/modules/workbox.html
 - 增加多主题适配

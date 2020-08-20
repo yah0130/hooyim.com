@@ -1,7 +1,7 @@
 /**
  * @file 分类数据状态 / ES module
  * @module store/category
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 export const CATEGORY_API_PATH = '/category'

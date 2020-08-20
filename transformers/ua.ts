@@ -1,7 +1,7 @@
 /**
  * @file UA 解析器 / ES module
  * @module transforms/ua
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import parser from 'ua-parser-js'

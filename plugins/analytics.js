@@ -1,7 +1,7 @@
 /**
  * @file GA 统计服务 / ES module
  * @module plugins/analytics
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import Vue from 'vue'

@@ -1,7 +1,7 @@
 /**
  * @file i18n interface / ES module
  * @module interfaces/http
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 interface Ii18nItem {

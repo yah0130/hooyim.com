@@ -1,7 +1,7 @@
 /**
  * @file polyfill / ES module
  * @module plugins/polyfill
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { isBrowser } from '~/environment'

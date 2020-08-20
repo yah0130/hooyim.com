@@ -1,7 +1,7 @@
 /**
  * @file 文档解析服务 / ES module
  * @module plugins/marked
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import marked from 'marked'

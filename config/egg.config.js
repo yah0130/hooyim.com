@@ -1,7 +1,7 @@
 /**
  * @file 彩蛋配置 Egg config / ES module
  * @module egg.config
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 export const titles = [

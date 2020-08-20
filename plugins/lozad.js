@@ -1,7 +1,7 @@
 /**
  * @file 懒加载 / ES module
  * @module plugins/lozad
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import lozad from 'lozad'

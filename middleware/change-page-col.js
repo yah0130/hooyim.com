@@ -1,7 +1,7 @@
 /**
  * @file 响应布局-中间件 / ES module
  * @module middleware/change-page-col
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import systemConstants from '~/constants/system'

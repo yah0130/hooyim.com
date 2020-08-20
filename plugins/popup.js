@@ -1,7 +1,7 @@
 /**
  * @file 弹窗服务 / ES module
  * @module plugins/popup
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { isBrowser } from '~/environment'

@@ -143,7 +143,7 @@
           ? `Technical consultant / ${appConfig.meta.title}`
           : `嗨！Hooyim，久仰大名！`
         const body = this.isEnLang
-          ? 'Hi Surmon, My name is '
+          ? 'Hi Hooyim, My name is '
           : `我有一个需求：%0D%0A %0D%0A - 需求简述： %0D%0A %0D%0A - 需求文档：%0D%0A %0D%0A - 预算金额：%0D%0A %0D%0A - 预算周期：`
         const mailAddress =
           'mailto:yah0130@foxmail.com' +

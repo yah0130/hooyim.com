@@ -1,7 +1,7 @@
 /**
  * @file App config / ES module
  * @module app.config
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 export const meta = {

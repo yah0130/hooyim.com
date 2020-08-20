@@ -1,7 +1,7 @@
 /**
  * @file 模拟延时器 / ES module
  * @module services/fetch-delay
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import appConfig from '~/config/app.config'

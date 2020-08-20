@@ -1,7 +1,7 @@
 /**
  * @file Filters / ES module
  * @module filters/index
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { textOverflow, firstUpperCase } from '~/transformers/text'

@@ -1,7 +1,7 @@
 /**
  * @file 标签数据状态 / ES module
  * @module store/tag
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 export const TAG_API_PATH = '/tag'

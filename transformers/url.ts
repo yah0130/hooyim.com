@@ -1,7 +1,7 @@
 /**
  * @file Url transformer / ES module
  * @module transforms/url
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import apiConfig from '~/config/api.config'

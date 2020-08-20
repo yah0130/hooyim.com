@@ -1,7 +1,7 @@
 /**
  * @file Ads config / ES module
  * @module ad.config
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { getFileCDNUrl } from '~/transformers/url'

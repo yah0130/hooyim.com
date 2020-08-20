@@ -1,7 +1,7 @@
 /**
  * @file Adsense box component / ES module
  * @module components/adsense
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import AdsenseArchive from './archive'

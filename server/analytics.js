@@ -1,7 +1,7 @@
 /**
  * @file GA 更新器 / Commonjs module
  * @module server/analytics
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 const fs = require('fs')

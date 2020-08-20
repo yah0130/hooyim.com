@@ -1,7 +1,7 @@
 /**
  * @file Time Filters / ES module
  * @module transforms/time-filter
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import systemConstants from '~/constants/system'

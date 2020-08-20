@@ -1,7 +1,7 @@
 /**
  * @file 音乐（外挂应用）/ ES module
  * @module services/music
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import Vue from 'vue'

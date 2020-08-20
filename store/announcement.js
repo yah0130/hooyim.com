@@ -1,7 +1,7 @@
 /**
  * @file 公告数据状态 / ES module
  * @module store/announcement
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 export const ANNOUNCEMENT_API_PATH = '/announcement'

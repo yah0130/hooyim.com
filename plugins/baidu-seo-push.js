@@ -1,7 +1,7 @@
 /**
  * @file 客户端百度 SEO 服务 / ES module
  * @module plugins/baidu-seo-push
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { isBrowser, isProdMode } from '~/environment'

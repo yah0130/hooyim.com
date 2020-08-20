@@ -1,7 +1,7 @@
 /**
  * @file Nuxt config / Hybrid module
  * @module nuxt.config
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import appConfig from './config/app.config'

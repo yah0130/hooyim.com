@@ -1,7 +1,7 @@
 /**
  * @file 弹幕服务 / Commonjs module
  * @module server/barrage
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 const path = require('path')

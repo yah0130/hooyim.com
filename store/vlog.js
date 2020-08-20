@@ -1,7 +1,7 @@
 /**
  * @file Vlog 项目数据状态 / ES module
  * @module store/vlog
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 export const VLOG_API_PATH = '/bilibili/list'

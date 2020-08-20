@@ -1,7 +1,7 @@
 /**
  * @file 全局设置数据状态 / ES module
  * @module store/option
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import i18nConfig from '~/config/i18n.config'
@@ -18,7 +18,6 @@ export const state = () => ({
   // 同构常量
   constants: stateConstants,
 
-  // 图片格式，见 OSS: https://oss.console.aliyun.com/bucket/oss-cn-hangzhou/surmon-static/process/img
   imageExt: systemConstants.ImageExt.WebP,
 
   // ua

@@ -1,7 +1,7 @@
 /**
  * @file 本机数据状态 / ES module
  * @module services/local-storage
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 export const get = (key: string) => localStorage.getItem(key)

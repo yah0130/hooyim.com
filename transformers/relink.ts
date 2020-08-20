@@ -2,7 +2,7 @@
 /**
  * @file 文章 -> 标签内链关系构造器 / ES module
  * @module transforms/relink
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { firstUpperCase } from './text'

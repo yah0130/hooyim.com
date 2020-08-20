@@ -1,7 +1,7 @@
 /**
  * @file State constant / ES module
  * @module state.constant
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 // 转载状态

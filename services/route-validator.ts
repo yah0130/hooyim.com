@@ -1,7 +1,7 @@
 /**
  * @file 路径判定器 / ES module
  * @module services/route-validator
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import systemConstants from '~/constants/system'

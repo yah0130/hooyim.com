@@ -1,7 +1,7 @@
 /**
  * @file System constant / ES module
  * @module system.constant
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 export const Language = {

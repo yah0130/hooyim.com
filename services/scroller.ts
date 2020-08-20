@@ -1,7 +1,7 @@
 /**
  * @file 滑动到任何目的地 / ES module
  * @module services/scroller
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 const BezierEasing = require('bezier-easing')

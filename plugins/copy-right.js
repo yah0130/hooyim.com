@@ -1,7 +1,7 @@
 /**
  * @file 复制拦截器 / ES module
  * @module plugins/copy-right
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { isBrowser } from '~/environment'

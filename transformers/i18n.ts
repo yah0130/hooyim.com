@@ -1,7 +1,7 @@
 /**
  * @file i18n 语言格式转换器 / ES module
  * @module transforms/i18n
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import { Ii18nConfig } from '~/config/i18n.config.type'

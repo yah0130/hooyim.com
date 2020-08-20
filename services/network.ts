@@ -1,7 +1,7 @@
 /**
  * @file Network / ES module
  * @module utils/network
- * @author Surmon <https://github.com/surmon-china>
+ * @author Hooyim <https://github.com/yah0130>
  */
 
 import axios from 'axios'

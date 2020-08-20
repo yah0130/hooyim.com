@@ -5,7 +5,7 @@
         <div class="item">
           <i class="iconfont icon-swordsman" />
           <p class="bio">
-            <span>{{ isEnLang ? `I'm Surmon, a digital nomad.` : `浪蝶游蜂，迈步九云中` }}</span>
+            <span>{{ isEnLang ? `I'm Hooyim, a digital nomad.` : `浪蝶游蜂，迈步九云中` }}</span>
           </p>
         </div>
         <!-- <div class="item">
