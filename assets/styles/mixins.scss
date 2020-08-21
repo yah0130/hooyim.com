@@ -56,7 +56,7 @@
 }
 
 @mixin blur-filter($param: 'horizontal') {
-  filter: force-source-url('/images/motion-blur-filter.svg##{$param}');
+  filter: cdn-url('/images/motion-blur-filter.svg##{$param}');
 }
 
 /// Adds a browser prefix to the property
