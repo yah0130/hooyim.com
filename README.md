@@ -14,8 +14,6 @@
 
 **Online site:** https://www.hooyim.com
 
-**更新记录：[CHANGELOG.md](https://github.com/yah0130/surmon.me/blob/master/CHANGELOG.md)**
-
 ## Development Setup
 
 ```bash
