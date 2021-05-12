@@ -10,18 +10,23 @@
               other: article.origin === constants.OriginState.Reprint,
               hybrid: article.origin === constants.OriginState.Hybrid
             }"
-          >{{ originText }}</span>
+            >{{ originText }}</span
+          >
           <img
             class="item-thumb-img"
             :src="getThumb(article.thumb)"
             :alt="article.title"
             :title="article.title"
-          >
+          />
         </nuxt-link>
       </div>
       <div class="item-body">
         <h5 class="item-title">
-          <nuxt-link :to="`/article/${article.id}`" :title="article.title" v-text="article.title" />
+          <nuxt-link
+            :to="`/article/${article.id}`"
+            :title="article.title"
+            v-text="article.title"
+          />
         </h5>
         <p
           class="item-description"
@@ -76,271 +81,270 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
-  import { getFileCDNUrl } from '~/transformers/url'
-  import { getArchiveArticleThumbnailUrl } from '~/transformers/thumbnail'
-  import { getJSONStorageReader } from '~/services/local-storage'
-  import systemConstants from '~/constants/system'
+import { mapState } from "vuex";
+import { getFileCDNUrl } from "~/transformers/url";
+import { getArchiveArticleThumbnailUrl } from "~/transformers/thumbnail";
+import { getJSONStorageReader } from "~/services/local-storage";
+import systemConstants from "~/constants/system";
 
-  const localHistoryLikes = getJSONStorageReader(systemConstants.StorageField.UserLikeHistory)
+const localHistoryLikes = getJSONStorageReader(
+  systemConstants.StorageField.UserLikeHistory
+);
 
-  export default {
-    name: 'ArticleListItem',
-    props: {
-      article: Object
+export default {
+  name: "ArticleListItem",
+  props: {
+    article: Object
+  },
+  data() {
+    return {
+      isLiked: false
+    };
+  },
+  computed: {
+    ...mapState("global", ["constants", "language", "isMobile"]),
+    isEnLang() {
+      return this.$store.getters["global/isEnLang"];
     },
-    data() {
-      return {
-        isLiked: false
+    originText() {
+      if (!this.article.origin) {
+        return this.$i18n.text.origin.original;
       }
-    },
-    computed: {
-      ...mapState('global', [
-        'constants',
-        'language',
-        'isMobile'
-      ]),
-      isEnLang() {
-        return this.$store.getters['global/isEnLang']
-      },
-      originText() {
-        if (!this.article.origin) {
-          return this.$i18n.text.origin.original
-        }
-        if (this.article.origin === this.constants.OriginState.Reprint) {
-          return this.$i18n.text.origin.reprint
-        }
-        if (this.article.origin === this.constants.OriginState.Hybrid) {
-          return this.$i18n.text.origin.hybrid
-        }
-        return '-'
+      if (this.article.origin === this.constants.OriginState.Reprint) {
+        return this.$i18n.text.origin.reprint;
       }
-    },
-    methods: {
-      getThumb(thumb) {
-        return getArchiveArticleThumbnailUrl(
-          thumb,
-          this.$store.getters['global/isWebPImage']
-        )
+      if (this.article.origin === this.constants.OriginState.Hybrid) {
+        return this.$i18n.text.origin.hybrid;
       }
-    },
-    mounted() {
-      this.isLiked = localHistoryLikes.get().pages.includes(this.article.id)
+      return "-";
     }
+  },
+  methods: {
+    getThumb(thumb) {
+      return getArchiveArticleThumbnailUrl(
+        thumb,
+        this.$store.getters["global/isWebPImage"]
+      );
+    }
+  },
+  mounted() {
+    const likes = localHistoryLikes.get();
+    this.isLiked = likes ? likes.pages.includes(this.article.id) : false;
   }
+};
 </script>
 
 <style lang="scss" scoped>
-  .article-list-item {
-    margin-bottom: $lg-gap;
-    @include module-blur-bg();
-    @include background-transition();
+.article-list-item {
+  margin-bottom: $lg-gap;
+  @include module-blur-bg();
+  @include background-transition();
+
+  &:hover {
+    background-color: $module-hover-bg;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  > .item-content {
+    $height: $gap * 11;
+    $padding: $sm-gap;
+    $content-height: $height - ($padding * 2);
+    display: block;
+    overflow: hidden;
+    height: $height;
+    padding: $padding;
 
     &:hover {
-      background-color: $module-hover-bg;
+      .item-thumb {
+        .item-oirigin {
+          opacity: 1;
+        }
+
+        .item-thumb-img {
+          opacity: 0.95;
+          transform: translateX(-3px);
+        }
+      }
     }
+
+    > .item-thumb {
+      float: left;
+      width: 12em;
+      height: $content-height;
+      overflow: hidden;
+      position: relative;
+
+      .item-oirigin {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 2.1rem;
+        line-height: 2.1rem;
+        z-index: $z-index-normal + 1;
+        padding: 0 $sm-gap;
+        border-bottom-right-radius: 1px;
+        opacity: 0.4;
+        font-size: $font-size-small;
+        color: $text-reversal;
+        text-align: center;
+        text-transform: uppercase;
+        @include visibility-transition();
+
+        &.self {
+          background-color: rgba($accent, 0.5);
+        }
+
+        &.other {
+          background-color: rgba($red, 0.5);
+        }
+
+        &.hybrid {
+          background-color: rgba($primary, 0.5);
+        }
+      }
+
+      .item-thumb-img {
+        min-width: 100%;
+        width: calc(100% + 3px);
+        max-width: calc(100% + 3px);
+        height: auto;
+        min-height: $content-height;
+        border-color: transparent;
+        background-color: $module-hover-bg;
+        opacity: 1;
+        transform: translateX(0);
+        transition: transform $transition-time-fast,
+          opacity $transition-time-fast;
+      }
+    }
+
+    > .item-body {
+      float: right;
+      width: 28.5em;
+      height: $content-height;
+
+      > .item-title {
+        margin-top: 3px;
+        margin-bottom: $sm-gap;
+        font-weight: bold;
+        color: $link-hover-color;
+        @include text-overflow();
+
+        > a {
+          margin-left: 0;
+          transition: margin $transition-time-normal;
+
+          &:hover {
+            display: inline-block;
+            text-decoration: underline;
+            margin-left: $sm-gap;
+          }
+        }
+      }
+
+      > .item-description {
+        height: 5rem;
+        margin: 0;
+        margin-bottom: $xs-gap;
+        line-height: 1.8em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: $font-size-h6;
+        @include clamp(3);
+      }
+
+      > .item-meta {
+        height: 2em;
+        line-height: 2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        overflow: hidden;
+        font-size: $font-size-small;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-wrap: normal;
+
+        > .date {
+          text-transform: uppercase;
+        }
+
+        > .views {
+          min-width: 4rem;
+        }
+
+        > .likes {
+          > .liked {
+            color: $red;
+          }
+        }
+
+        > .likes,
+        > .comments {
+          min-width: 3em;
+        }
+
+        > .date,
+        > .views,
+        > .comments,
+        > .likes,
+        > .tags,
+        > .categories {
+          > .iconfont {
+            margin-right: $xs-gap;
+          }
+        }
+
+        > .tags,
+        > .categories {
+          a {
+            text-transform: capitalize;
+            margin-right: $sm-gap;
+          }
+        }
+
+        > .tags {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &.mobile {
+    margin-bottom: $gap;
 
     &:last-child {
       margin: 0;
     }
 
     > .item-content {
-      $height: $gap * 11;
-      $padding: $sm-gap;
-      $content-height: $height - ($padding * 2);
-      display: block;
-      overflow: hidden;
-      height: $height;
-      padding: $padding;
-
-      &:hover {
-        .item-thumb {
-          .item-oirigin {
-            opacity: 1;
-          }
-
-          .item-thumb-img {
-            opacity: .95;
-            transform: translateX(-3px);
-          }
-        }
-      }
-
-      > .item-thumb {
-        float: left;
-        width: 12em;
-        height: $content-height;
-        overflow: hidden;
-        position: relative;
-
-        .item-oirigin {
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 2.1rem;
-          line-height: 2.1rem;
-          z-index:  $z-index-normal + 1;
-          padding: 0 $sm-gap;
-          border-bottom-right-radius: 1px;
-          opacity: .4;
-          font-size: $font-size-small;
-          color: $text-reversal;
-          text-align: center;
-          text-transform: uppercase;
-          @include visibility-transition();
-
-          &.self {
-            background-color: rgba($accent, .5);
-          }
-
-          &.other {
-            background-color: rgba($red, .5);
-          }
-
-          &.hybrid {
-            background-color: rgba($primary, .5);
-          }
-        }
-
-        .item-thumb-img {
-          min-width: 100%;
-          width: calc(100% + 3px);
-          max-width: calc(100% + 3px);
-          height: auto;
-          min-height: $content-height;
-          border-color: transparent;
-          background-color: $module-hover-bg;
-          opacity: 1;
-          transform: translateX(0);
-          transition: transform $transition-time-fast, opacity $transition-time-fast;
-        }
-      }
+      height: auto;
+      padding: $sm-gap $gap;
 
       > .item-body {
-        float: right;
-        width: 28.5em;
-        height: $content-height;
-
-        > .item-title {
-          margin-top: 3px;
-          margin-bottom: $sm-gap;
-          font-weight: bold;
-          color: $link-hover-color;
-          @include text-overflow();
-
-          > a {
-            margin-left: 0;
-            transition: margin $transition-time-normal;
-
-            &:hover {
-              display: inline-block;
-              text-decoration: underline;
-              margin-left: $sm-gap;
-            }
-          }
-        }
+        width: 100%;
+        height: auto;
 
         > .item-description {
-          height: 5rem;
-          margin: 0;
-          margin-bottom: $xs-gap;
-          line-height: 1.8em;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          font-size: $font-size-h6;
-          @include clamp(3);
+          height: auto;
+          margin-bottom: 0.5em;
         }
 
         > .item-meta {
-          height: 2em;
-          line-height: 2em;
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-          overflow: hidden;
-          font-size: $font-size-small;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          word-wrap: normal;
-
-          > .date {
-            text-transform: uppercase;
-          }
-
-          > .views {
-            min-width: 4rem;
-          }
-
-          > .likes {
-            > .liked {
-              color: $red;
-            }
-          }
-
-          > .likes,
-          > .comments {
-            min-width: 3em;
-          }
-
           > .date,
           > .views,
           > .comments,
           > .likes,
           > .tags,
           > .categories {
-            > .iconfont {
-              margin-right: $xs-gap;
-            }
-          }
-
-          > .tags,
-          > .categories {
-            a {
-              text-transform: capitalize;
-              margin-right: $sm-gap;
-            }
-          }
-
-          > .tags {
-            margin-right: 0;
-          }
-        }
-      }
-    }
-
-
-    &.mobile {
-      margin-bottom: $gap;
-
-      &:last-child {
-        margin: 0;
-      }
-
-      > .item-content {
-        height: auto;
-        padding: $sm-gap $gap;
-
-        > .item-body {
-          width: 100%;
-          height: auto;
-
-          > .item-description {
-            height: auto;
-            margin-bottom: .5em;
-          }
-
-          > .item-meta {
-            > .date,
-            > .views,
-            > .comments,
-            > .likes,
-            > .tags,
-            > .categories {
-              margin: 0;
-            }
+            margin: 0;
           }
         }
       }
     }
   }
+}
 </style>
