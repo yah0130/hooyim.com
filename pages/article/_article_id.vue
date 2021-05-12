@@ -300,18 +300,18 @@ export default {
   },
   head() {
     return {
-      title: this.article?.title || "...",
+      title: this.article.title || "...",
       meta: [
         {
           hid: "keywords",
           name: "keywords",
           content:
-            this.article?.keywords?.join(",") || this.article?.title || ""
+            this.article.keywords.join(",") || this.article.title || ""
         },
         {
           hid: "description",
           name: "description",
-          content: this.article?.description
+          content: this.article.description
         }
       ]
     };

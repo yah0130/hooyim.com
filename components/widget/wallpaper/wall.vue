@@ -68,10 +68,10 @@
         return this.$store.getters['wallpaper/parpers']
       },
       currentWallpaper() {
-        return this.wallpapers?.length && this.wallpapers?.[this.index]
+        return this.wallpapers.length && this.wallpapers[this.index]
       },
       currentWallpaperUrl() {
-        return this.currentWallpaper?.humanizedImageUrl
+        return this.currentWallpaper.humanizedImageUrl
       },
       canPrev() {
         return this.index > 0

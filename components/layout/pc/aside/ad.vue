@@ -42,13 +42,13 @@
       swiper: {
         cache: false,
         get() {
-          return this.$refs.swiper?.$swiper
+          return this.$refs.swiper.$swiper
         }
       },
       currentSlideRealIndex: {
         cache: false,
         get() {
-          return this.swiper?.realIndex
+          return this.swiper.realIndex
         }
       },
       swiperOption() {

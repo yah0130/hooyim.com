@@ -125,7 +125,7 @@
       }
     },
     mounted() {
-      this.isLiked = localHistoryLikes.get()?.pages.includes(this.article.id)
+      this.isLiked = localHistoryLikes.get().pages.includes(this.article.id)
     }
   }
 </script>
