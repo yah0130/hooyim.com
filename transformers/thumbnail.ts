@@ -37,7 +37,5 @@ export const getArchiveArticleThumbnailUrl = (thumb: string, isWebPImage: boolea
 
 export const getGravatarByEmail = (email: string) => {
   let avatar = gravatar.url(email, { protocol: 'https' })
-  avatar = avatar.replace('https://s.gravatar.com/avatar', API.GRAVATAR)
-  avatar += `?x-oss-process=style/gravatar`
   return avatar
 }
