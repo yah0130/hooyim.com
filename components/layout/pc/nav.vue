@@ -47,10 +47,10 @@
         <i class="iconfont icon-tool"></i>
         <span class="text" v-text="$i18n.nav.service"></span>
       </nuxt-link> -->
-      <!-- <nuxt-link to="/guestbook" class="item guestbook">
+      <nuxt-link to="/guestbook" class="item guestbook">
         <i class="iconfont icon-comment"></i>
         <span class="text" v-text="$i18n.nav.guestbook"></span>
-      </nuxt-link> -->
+      </nuxt-link>
       <!-- <a
         v-if="false"
         :href="adConfig.nav.holiday"
